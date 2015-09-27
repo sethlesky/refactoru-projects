@@ -1,0 +1,15 @@
+/* Attribute selector */
+
+[class*='col-'] {
+	width: 100%;
+	min-height: 1px;
+	float: left;
+}
+
+.col-1-2 {
+	display: inline-block;
+}
+
+@media screen and (min-width: 960) {
+	
+}

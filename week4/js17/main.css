@@ -1,0 +1,52 @@
+* {
+	box-sizing:border-box;
+}
+
+html {
+	font-size:12px;
+}
+
+ul {
+	padding:0;
+	margin:0;
+}
+
+li {
+	list-style: none;
+	margin:0;
+}
+
+.main-container {
+	max-width:960px;
+	margin: 0 auto;
+	border: 1px solid black;
+	padding:1.5rem;
+	overflow: hidden;
+}
+
+.item-price {
+	float:right;
+}
+
+.plate-item {
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin:1rem 0 1rem 0;
+	font-size:1.5rem;
+	padding: 5px;
+}
+
+.isgood {
+	background-color: green;
+}
+
+.warning {
+	background-color: red;
+}
+
+.cart {
+	float: right;
+	width: 200px;
+	border: 1px solid gray;
+	padding: 5px;
+}

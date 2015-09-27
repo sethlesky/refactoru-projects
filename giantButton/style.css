@@ -1,0 +1,33 @@
+body {
+	text-align: center;
+}
+
+.big-btn {
+	position: relative;
+	display: inline-block;
+	margin: 0 auto;
+	top: 200px;
+	width: 200px;
+	height: 100px;
+	font-size: 24px;
+	border-radius: 5px;
+}
+
+.popup {
+	width: 300px;
+	height: 300px;
+	position: fixed;
+	top: 100px;
+	left: ;
+	background-color: lightgray;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.close {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-align: center;
+}

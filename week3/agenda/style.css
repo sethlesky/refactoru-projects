@@ -1,0 +1,35 @@
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.day {
+	min-height: 50px;
+	background-color: #dddddd;
+	margin: 5px;
+	padding: 5px;
+}
+
+.header {
+	background-color: lightgreen;
+	padding: 5px;
+	margin: 5px;
+}
+
+.addBtn {
+	float: right;
+}
+
+.addBtn:hover,
+.deleteBtn:hover,
+.editBtn:hover {
+	color: gray;
+}
+
+.note-form {
+	padding-top: 3px;
+}
+
+input {
+	max-width: 50%;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="bobsApp">
+<head>
+	<title>Bob's Burners</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
+</head>
+<body ng-controller="bobsController">
+	<div class="main-container">
+		<header>
+			<h1>Bob's Burners</h1>
+		</header>
+		<div class="menu">
+			<label>Vegan</label><input type="checkbox" ng-model="wantsVegan"/>
+			<label>Gluten Free</label><input type="checkbox" ng-model="wantsGlutenFree"/>
+			<label>Citrus Free</label><input type="checkbox" ng-model="wantsCitrusFree"/>
+
+			<ul>
+				<li ng-click="showOrderBtn($index, item)" ng-repeat="item in plates" ng-class="recommendedPlate($index, item)"class="plate-item">
+					<div class="item-price">{{item.price}}</div>
+					<div>{{item.name}}</div>
+					<div>{{item.description}}</div>
+					<div ng-show="item.showButton">
+						<button ng-click="addOrder($index, item)">Order Now!</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="cart">
+			<div><strong>Orders Placed</strong></div>
+			<ul>
+				<li ng-repeat="order in orders track by $index">{{order.name}} - {{order.price}}</li>
+			</ul>
+			<div class="total">
+				Total: ${{total}}
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js16.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

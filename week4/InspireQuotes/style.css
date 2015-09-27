@@ -1,0 +1,28 @@
+*:focus {outline:0;}
+
+ng-md-icon {
+	fill: white;
+}
+
+md-content {
+	padding: 16px;
+}
+
+.note {
+	margin: 10px;
+}
+
+.name {
+	cursor: pointer;
+}
+
+.ng-rating {
+	margin-right: 20px;
+}
+
+.dialogdemoBasicUsage #popupContainer {
+  position: relative; }
+.dialogdemoBasicUsage .debt-be-gone {
+  font-weight: bold;
+  color: blue;
+  text-decoration: underline; }

@@ -1,0 +1,198 @@
+/* ADD YOUR STYLES HERE */
+* {
+	box-sizing: border-box;
+}
+
+/* Signup Form */
+.signup {
+	width: 430px;
+	margin-left: 20px;
+}
+.signup label {
+	display: inline-block;
+	text-align: right;
+	padding-right: 10px;
+	padding-top: 5px;
+	width: 100px;
+}
+.signup input {
+	border-radius: 5px;
+	border: 1px solid lightgray;
+	height: 25px;
+	width: 300px;
+	float: right;
+}
+.signup > div {
+	padding: 10px 0px;
+}
+
+.signup .city {
+	width: 175px;
+	float: none;
+	margin-right: 25px;
+	margin-left: 13px;
+}
+
+.signup .state {
+	width: 40px;
+	margin-left: 10px;
+	float: none;
+}
+
+.signup .state-lbl {
+	width: 25px;
+}
+
+.news-checkbox {
+	margin-left: 106px;
+}
+
+.news-checkbox label {
+	width: 100%;
+	text-align: left;
+	margin-left: 19px;
+}
+
+.news-checkbox input {
+	width: 20px;
+	float: none;
+	vertical-align: middle;
+}
+
+.signup .submit-btn {
+	padding: 20px 0px;
+	vertical-align: middle;
+	line-height: 5px;
+}
+
+.validation {
+
+}
+
+.validation div	{
+	padding: 10px 0px;
+	width: 100%;
+}
+.validation input {
+	border-radius: 5px;
+	border: 1px solid lightgray;
+	height: 25px;
+	width: 300px;
+	height: 25px;
+	padding-left: 5px;
+	margin-left: 20px;
+}
+
+.validation label {
+	text-align: right;
+	width: 100px;
+	display: inline-block;
+}
+
+.first-name input {
+	padding-left: 5px;
+}
+
+.validation .is-valid {
+	color: #45CF2C;
+}
+
+.validation .valid-input {
+	/*border-color: #45CF2C;*/
+}
+
+.validation .valid-input:focus {
+	outline: none;
+	border-color: #45CF2C;
+	box-shadow: 0 0 5px #45CF2C;
+}
+
+.validation .invalid-input:focus {
+	outline: none;
+	border-color: red;
+	box-shadow: 0 0 5px red;
+}
+
+.validation .is-invalid {
+	color: red;
+}
+
+/* Search bar */
+.searchbar {
+	width: 100%;
+	background-color: #DDDDDD;
+	padding: 14px 0px;
+	position: relative;
+	border-radius: 10px;
+}
+
+.left {
+    position:absolute;
+    left:10px;
+    width:100px;
+    top: 21px;
+}
+
+.center {
+    height:100%;
+    margin: 0 110px;
+}
+
+.center input {
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid lightgray;
+	padding: 6px 6px;
+}
+
+.right {
+	position:absolute;
+	right:10px;
+	top: 15px;
+	width:78px;
+	background-color: #E88289;
+	border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.omnibox li {
+	display: inline-block;
+	margin-right: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	background-color: #8385F0;
+	color: white;
+	font-size: 12px;
+	padding: 2px 6px;
+}
+
+.omnibox ul {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 22px;
+	left: 4px;
+	width: 228px;
+}
+
+.omnibox li a {
+	background-color: #696ABF;
+	text-decoration: none;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 2px;
+	padding-right: 2px;
+	border-radius: 3px;
+	margin-right: 3px;
+	color: #C0B8C8;
+}
+
+.omnibox input {
+	padding-left: 265px;
+	border-radius: 5px;
+	border: 1px solid #DDDDDD;
+	width: 400px;
+	height: 26px;
+}

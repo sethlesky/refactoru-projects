@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Modularity</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="framework.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+  	<div class="instructions-container">
+
+  		<ol class="instruction-list" start="14">
+
+        <li>
+          <h1 class="instruction-title">Signup Form</h1>
+
+          <p class="instruction-text">Style a form so that labels are right-aligned against the field, and fields stack vertically.</p>
+          <div class="instruction-answer">
+            <!-- Edit here -->
+            <form class="signup">
+              <div>
+                <label>First Name</label>
+                <input type="text" name="firstName">
+              </div>
+              <div>
+                <label>Last Name</label>
+                <input type="text" name="lastName">
+              </div>
+              <div>
+                <label>Email</label>
+                <input type="email" name="email">
+              </div>
+            </form>
+            <!-- End editable area -->
+          </div>
+
+          <p class="instruction-text">Should work for some more complicated forms...</p>
+          <div class="instruction-answer">
+            <!-- Edit here -->
+            <form class="signup">
+              <div>
+                <label>First Name</label>
+                <input type="text" name="firstName">
+              </div>
+              <div>
+                <label>Last Name</label>
+                <input type="text" name="lastName">
+              </div>
+              <div>
+                <label>Email</label>
+                <input type="email" name="email">
+              </div>
+              <div>
+                <label>City</label>
+                <input class="city" type="text" name="city">
+                <label class="state-lbl">State</label>
+                <input class="state" type="text" name="state">
+              </div>
+              <div>
+                <div class="news-checkbox">
+                  <label><input type="checkbox">Sign up for the newsletter</label>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <input class="submit-btn" type="submit">
+                </div>
+              </div>
+            </form>
+            <!-- End editable area -->
+          </div>
+        </li>
+
+        <li>
+          <h1 class="instruction-title">Form Validation</h1>
+
+          <p class="instruction-text">Create styles for validated inputs and validation messages.</p>
+          <div class="instruction-answer">
+            <!-- Edit here -->
+            <form class="validation">
+              <div class="first-name">
+                <label>First Name</label>
+                <input class="valid-input" type="text" name="firstName" value="Pascal">
+                <span class="is-valid">✓</span>
+              </div>
+              <div class="last-name">
+                <label>Last Name</label>
+                <input type="text" name="lastName">
+              </div>
+              <div>
+                <label>Email</label>
+                <input class="invalid-input" type="email" name="email" value="myemail@something">
+                <span class="is-invalid">Please enter a valid value.</span>
+              </div>
+            </form>
+            <!-- End editable area -->
+          </div>
+        </li>
+
+        <li>
+          <h1 class="instruction-title">Search Bar</h1>
+
+          <p class="instruction-text">The textbox should be fluid, i.e. stretch to fit the available space when the window changes size. <em>Hint: Look up 3-column layouts with fluid center.</em></p>
+          <div class="instruction-answer">
+            <!-- Edit here -->
+            <div class="searchbar">
+              <label class="left">Find groups</label>
+              <div class="center">
+                <input placeholder="Find Groups by Title or Description">
+              </div>
+              <input class="right" type="submit">
+            </div>
+            <!-- End editable area -->
+          </div>
+        </li>
+
+        <li>
+          <h1 class="instruction-title">Omnibox</h1>
+
+          <p class="instruction-text">Create a textbox which can display multiple "tags" as there are entered.</p>
+          <div class="instruction-answer">
+            <!-- Edit here -->
+            <div class="omnibox">
+              <ul><li><a href="#">x</a>Date: Yesterday</li><li><a href="#">x</a>Label: Notes</li></ul>
+              <input type="text" placeholder="Enter more terms">
+            </div>
+            <!-- End editable area -->
+          </div>
+        </li>
+
+        <li>
+          <h1 class="instruction-title">Chunky List</h1>
+
+          <p class="instruction-text">Create a list of items that have multiple pieces of data per row, including an icon, title, description, and favorited count.</p>
+          <div class="instruction-answer">
+            <!-- Edit here -->
+            <div>
+              <div>
+                <h3>Public repositories</h3>
+              </div>
+              <ul>
+                <li >
+                  <a href="http://github.com/visionmedia/express" target="_blank">
+                    <div>
+                      <div>9,972</div>
+                      <div>
+                        <div></div>
+                      </div>
+                      <div>
+                        <div>express</div>
+                        <p title="Sinatra inspired web development framework for node.js -- insanely fast, flexible, and simple">Sinatra inspired web development framework for node.js -- insanely fast, flexible, and simple</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="http://github.com/visionmedia/jade" target="_blank">
+                    <div>
+                      <div>4,854</div>
+                      <div>
+                        <div></div>
+                      </div>
+                      <div>
+                        <div>jade</div>
+                        <p title="robust, elegant, feature rich template engine for nodejs">robust, elegant, feature rich template engine for nodejs</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="http://github.com/visionmedia/mocha" target="_blank">
+                    <div>
+                      <div>2,954</div>
+                      <div>
+                        <div></div>
+                      </div>
+                      <div>
+                        <div>mocha</div>
+                        <p title="simple, flexible, fun javascript test framework for node.js &amp; the browser. (BDD, TDD, QUnit styles via interfaces)">simple, flexible, fun javascript test framework for node.js &amp; the browser. (BDD, TDD, QUnit styles via interfaces)</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li >
+                  <a href="http://github.com/visionmedia/get-extras" target="_blank">
+                    <div>
+                      <div>2,342k</div>
+                      <div>
+                        <div></div>
+                      </div>
+                      <div>
+                        <div>git-extras</div>
+                        <p title="repo summary, repl, changelog population, author commit percentages and more">repo summary, repl, changelog population, author commit percentages and more</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li >
+                  <a href="http://github.com/visionmedia/uikit" target="_blank">
+                    <div>
+                      <div>1,183</div>
+                      <div>
+                        <div></div>
+                      </div>
+                      <div>
+                        <div>uikit</div>
+                        <p title="modern ui components for the modern web">modern ui components for the modern web</p>
+                      </div>
+                    </div>
+                  </a>
+              </ul>
+            </div>
+<!--jade 4,845 
+Jade - robust, elegant, feature rich template engine for nodejs
+mocha 2,954 
+mocha - simple, flexible, fun javascript test framework for node.js & the browser. (BDD, TDD, QUnit styles via interfaces)
+git-extras 2,342 
+GIT utilities -- repo summary, repl, changelog population, author commit percentages and more
+uikit 1,183 
+UIKit - modern ui components for the modern web-->
+            <!-- End editable area -->
+          </div>
+
+          <p class="instruction-text">What if we used a table for the markup instead? Style it the same as above. You should be able to use <em>nearly 100%</em> of the same classes.</p>
+          <div class="instruction-answer">
+            <!-- Edit here -->
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <h3>Public repositories</h3>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr >
+                  <td>
+                    <a href="http://github.com/visionmedia/express" target="_blank">
+                      <div>
+                        <div>9,972</div>
+                        <div>
+                          <div></div>
+                        </div>
+                        <div>
+                          <div>express</div>
+                          <p title="Sinatra inspired web development framework for node.js -- insanely fast, flexible, and simple">Sinatra inspired web development framework for node.js -- insanely fast, flexible, and simple</p>
+                        </div>
+                      </div>
+                    </a>
+                  </td>
+                </tr>
+
+                <tr >
+                  <td>
+                    <a href="http://github.com/visionmedia/jade" target="_blank">
+                      <div>
+                        <div>4,854</div>
+                        <div>
+                          <div></div>
+                        </div>
+                        <div>
+                          <div>jade</div>
+                          <p title="robust, elegant, feature rich template engine for nodejs">robust, elegant, feature rich template engine for nodejs</p>
+                        </div>
+                      </div>
+                    </a>
+                  </td>
+                </tr>
+
+                <tr >
+                  <td>
+                    <a href="http://github.com/visionmedia/mocha" target="_blank">
+                      <div>
+                        <div>2,954</div>
+                        <div>
+                          <div></div>
+                        </div>
+                        <div>
+                          <div>mocha</div>
+                          <p title="simple, flexible, fun javascript test framework for node.js &amp; the browser. (BDD, TDD, QUnit styles via interfaces)">simple, flexible, fun javascript test framework for node.js &amp; the browser. (BDD, TDD, QUnit styles via interfaces)</p>
+                        </div>
+                      </div>
+                    </a>
+                  </td>
+                </tr>
+
+                <tr >
+                  <td>
+                    <a href="http://github.com/visionmedia/get-extras" target="_blank">
+                      <div>
+                        <div>2,342k</div>
+                        <div>
+                          <div></div>
+                        </div>
+                        <div>
+                          <div>git-extras</div>
+                          <p title="repo summary, repl, changelog population, author commit percentages and more">repo summary, repl, changelog population, author commit percentages and more</p>
+                        </div>
+                      </div>
+                    </a>
+                  </td>
+                </tr>
+
+                <tr >
+                  <td>
+                    <a href="http://github.com/visionmedia/uikit" target="_blank">
+                      <div>
+                        <div>1,183</div>
+                        <div>
+                          <div></div>
+                        </div>
+                        <div>
+                          <div>uikit</div>
+                          <p title="modern ui components for the modern web">modern ui components for the modern web</p>
+                        </div>
+                      </div>
+                    </a>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+            <!-- End editable area -->
+          </div>
+        </li>
+
+			</ol>
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+body {
+	background-color: pink;
+}
+
+.container {
+	width: 600px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.btn {
+	position: fixed;
+	right: 50px;
+}
+
+img {
+	width: 100%
+}
+
+.signup {
+	font-size: 18px;
+	float: right;
+}

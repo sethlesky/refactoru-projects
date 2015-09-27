@@ -1,0 +1,32 @@
+.btn2 {
+    transition: property(all/background-color) 2s cubic-bezier;
+    height: 100px;
+    width: 100px;
+}
+
+.btn2:hover {
+    height:200px;
+}
+
+// animating when adding and removing classes
+// animate.css animation library
+
+// keyframes
+
+@keyframes fadeIn {
+    0% {
+        opacity: 1;
+        transform:translateY(0deg);
+    }
+    25% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+        transform:translateY(360deg);
+    }
+}
+
+.btn2:hover {
+    animation: fadeIn 4s;
+}

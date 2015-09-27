@@ -1,0 +1,27 @@
+
+Horizontal centering block
+	On div
+	margin: 0 auto;
+
+Horizontal centering inline-block
+	On parent
+	text-align: center;
+    // text properties are inherited by all children
+    // inner div needs to be reset
+
+Vertical centering (inline/inline-block)
+    line-height: 600px; (height of container)
+    vertical-align: middle
+    // text property inherited children must be reset
+    set line-hieght on the parent equal to its height
+    set vertical-align: middle on the child
+    and be care of inherited properties
+
+Block level vertical centering 
+    transform: translateY(-50%);
+    top: 50%;
+    position: relative;
+
+
+
+

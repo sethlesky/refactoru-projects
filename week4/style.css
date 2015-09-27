@@ -1,0 +1,15 @@
+.c1 {
+	background-color: blue;
+}
+
+.c2 {
+	background-color: green;
+}
+
+.c3 {
+	background-color: red;
+}
+
+.c1,.c2,.c3 {
+	height: 10px;
+}

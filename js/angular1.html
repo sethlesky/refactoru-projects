@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script type="text/javascript" src="angular1.js"></script>
+	<link rel="stylesheet" type="text/css" href="angular1.css">
+	<title>Angular Intro</title>
+</head>
+<body ng-app="myApp" ng-controller="appCtrl">
+
+	<button ng-click="showHeader()">Show a header</button>
+	<button ng-click="showList()">Show a list</button>
+	<h1 ng-show="headerVisible">And now there's a header</h1>
+	<ul ng-show="listVisible">
+		<li>awesome</li>
+		<li>list</li>
+		<li>of stuff</li>
+	</ul>
+	<h1>paragraph 1<span ng-show="hover">!</span></h1>
+	<a ng-show="linkVisible1" ng-click="linkClick($event, 1)" href="http://google.com">link here</a>
+	<p ng-mouseenter="hover = true" ng-mouseleave="hover = false" ng-class="{pink: hover}">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<h1>paragraph 2<span ng-show="hover2">!</span></h1>
+	<a ng-show="linkVisible2" ng-click="linkClick($event, 2)" href="http://google.com">link here</a>
+	<p ng-mouseenter="hover2 = true" ng-mouseleave="hover2 = false" ng-class="{pink: hover2}">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<h1>paragraph 3<span ng-show="hover3">!</span></h1>
+	<a ng-show="linkVisible3" ng-click="linkClick($event, 3)" href="http://google.com">link here</a>
+	<p ng-mouseenter="hover3 = true" ng-mouseleave="hover3 = false" ng-class="{pink: hover3}">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+</body>
+</html>

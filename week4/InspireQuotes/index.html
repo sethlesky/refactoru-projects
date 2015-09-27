@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="quoteApp">
+<head>
+	<title>Inspiring Quotes</title>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+	<meta name="viewport" content="initial-scale=1" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bower_components/ng-rating/css/ng-rating.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller="quoteCtl">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-aria.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.6.0/angular-material-icons.min.js"></script>
+	<script type="text/javascript" src="bower_components/ng-rating/js/ng-rating.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="quoteFactory.js"></script>
+
+	<md-toolbar>
+	  <div class="md-toolbar-tools">
+	    <md-button class="md-icon-button" aria-label="Settings">
+	      <md-icon md-font-set="material-icons"> chat </md-icon>
+	    </md-button>
+	    <h2>
+	      <div>Quote Monster</div>
+	    </h2>
+	    <span flex></span>
+	    <md-button class="md-icon-button" aria-label="Favorite">
+	      <md-icon ng-click="resetFilter()" ng-show="refreshVisible" md-font-set="material-icons"> refresh </md-icon>
+	    </md-button>
+	    <md-button class="md-icon-button" aria-label="Favorite">
+	      <md-icon ng-click="undoDelete()" md-font-set="material-icons"> undo </md-icon>
+	    </md-button>
+	    <md-button ng-click="randomQuote($event)" aria-label="Favorite">
+	    	Random Quote
+	    </md-button>
+	    <md-button class="md-icon-button" aria-label="Favorite">
+	      <md-icon ng-click="showAdvanced($event)" md-font-set="material-icons"> note_add </md-icon>
+	    </md-button>
+	  </div>
+	</md-toolbar>
+	<md-content>
+		<md-card ng-repeat="quote in quotes | filter:nameToFilter | orderBy:'-stars'">
+		  <md-card-content>
+		  <div layout="row">
+			  <span flex></span>
+			  <ng-rating ng-model="quote.stars"
+			          editable="true"
+			          show-grade="true">
+			  </ng-rating>
+		  </div>
+		  <h2 class="md-title name" ng-click="filterName(quote.name)">{{quote.name}}</h2>
+		    <p>
+		    	{{quote.quote}}
+		    </p>
+		  </md-card-content>
+		  <div class="md-actions" layout="row" layout-align="end center">
+		    <md-button ng-click="editQuote($event, $index)">Edit</md-button>
+		    <md-button ng-click="deleteQuote($event, $index)">Delete</md-button>
+		  </div>
+		</md-card>
+	</md-content>
+</body>
+</html>

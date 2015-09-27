@@ -1,0 +1,185 @@
+/* ADD YOUR STYLES HERE */
+
+/* 6 Horizontally Spaced */
+.center {
+	/*margin: 0 auto;*/
+	text-align: center;
+}
+
+.center img {
+	padding: 0 20px;
+}
+
+.row img, .row p, .row ol {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.row p {
+	vertical-align: top;
+}
+
+/* Vertically Spaced */
+.vcenter {
+	margin-top: 150px;
+	margin-bottom: 150px;
+}
+
+/* Horizontal list */
+.hlist {
+	padding: 0;
+}
+.hlist li {
+	display: inline-block;
+}
+
+/* Buttons */
+.btn {
+	width: 196px;
+	height: 61px;
+	display: inline-block;
+	background-color: #E88289;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 60px;
+	text-decoration: none;
+	font-size: 22px;
+}
+
+.btn.learn {
+	height: 33px;
+	line-height: 32px;
+	font-size: 14px;
+	width: 145px;
+}
+
+.btn.small {
+	width: 25px;
+	height: 20px;
+	line-height: 22px;
+	font-size: 10px;
+	margin-top: 5px;
+}
+
+.btn.bottom {
+	width: 179px;
+	height: 42px;
+	line-height: 46px;
+	border: none;
+	font-size: 18px;
+	vertical-align: top;
+}
+
+
+/* Navigation */
+nav ul {
+	width: 100%;
+}
+
+nav li {
+	display: block;
+	background-color: #E88289;
+	text-decoration: none;
+	margin: 0;
+	float: left;
+	padding: 11px 50px
+}
+
+nav li a {
+	text-decoration: none;
+	color: white;
+}
+
+nav li a:hover {
+	text-decoration: underline;
+}
+
+nav ul {
+	padding-left: 0;
+}
+
+nav li:last-child {
+	border-radius: 0 10px 10px 0;
+}
+
+nav li:first-child {
+	border-radius: 10px 0 0 10px;
+}
+
+/* Pagination */
+
+.page {
+	padding: 0px;
+	color: gray;
+}
+
+.page a {
+	text-decoration: none;
+	color: #E88289;
+}
+.page li {
+	display: inline-block;
+	border-bottom: solid 3px #E88289;
+	padding: 0 10px;
+	padding-bottom: 5px;
+}
+
+.page .nonlink {
+	border-bottom: solid 3px gray;
+}
+
+.page li:first-child, .page li:last-child {
+	border-bottom: none;
+}
+
+
+/* Comment Stream */
+.comment > div {
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 10px;
+}
+
+.comment time {
+	font-size: 12px;
+	color: gray;
+}
+
+/* Tabs */
+
+.tabnav {
+	position: relative;
+	top: 1px;
+}
+.tabnav li {
+	display: inline-block;
+	border: 1px solid darkblue;
+	border-radius: 5px 5px 0 0;
+	padding: 4px 9px;
+	border-bottom: none;
+}
+
+.tabnav a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 13px;
+	color: blue;
+}
+
+.tabnav .active {
+	border-bottom: white 1px solid;
+}
+
+.tabnav {
+	padding: 0;
+	margin-left: 10px;
+}
+
+.tabcontent {
+	border: 1px solid darkblue;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 1px;
+}
+

@@ -1,0 +1,44 @@
+<div class="main" layout="row">
+  <span flex=""></span>
+  <div layout="column">
+    <h1>St</h1>
+    <img src="/img/ic_comment_24px.svg">
+    <form class="md-whiteframe-z1" ng-submit="save()" name="form" novalidate layout-padding="">
+      <p>Add a thing</p>
+      <md-input-container>
+        <label>Name</label>
+        <input ng-model="newThing.name" placeholder="Name">
+      </md-input-container>
+      <input class="md-button" type="submit" value="Add">
+    </form>
+    <div layout="row" layout-padding="">
+      <md-input-container flex="65">
+        <label>Search</label>
+        <input type="Search" ng-model="search" placeholder="Search">
+      </md-input-container>
+      <md-select ng-model="orderProperty" flex="35">
+        <md-option value="1">Ascending</md-option>
+        <md-option value="-1">Descending</md-option>
+      </md-select>
+    </div>
+
+    <ul>
+      <li dir-paginate="thing in things | itemsPerPage: perPage" total-items="thingsCount.count" current-page='page'>
+        <p>{{ thing.name }} <button ng-click="remove(thing)">&times;</button></p>
+      </li>
+    </ul>
+    <dir-pagination-controls on-page-change="pageChanged(newPageNumber)"></dir-pagination-controls>
+
+    <p>Total number of things: {{thingsCount.count}}</p>
+  </div>
+  <span flex=""></span>
+</div>
+<md-toolbar layout="row">
+  <md-input-container flex>
+     <label>Add a comment or link to this moment</label>
+     <input ng-model="user.firstName">
+   </md-input-container>
+   <md-button class="md-raised md-button md-primary" aria-label="Submit">
+     <md-icon md-svg-src="img/ic_comment_24px.svg"></md-icon>
+   </md-button>
+</md-toolbar>

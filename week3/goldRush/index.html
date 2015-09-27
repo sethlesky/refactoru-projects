@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gold Rush</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
+</head>
+<body ng-app="goldDigger" ng-controller="goldCtl">
+	<div class="container">
+		<img class="map" src="img/map.jpg" ng-click="click($event)">
+		<div class="marker" ng-mouseover="expand($event, $index)" ng-repeat="mark in markers" ng-style="{top:mark.top, left:mark.left}">
+			<div class="note" ng-show="mark.expand" ng-mouseout="close($event, $index)">
+				<div class="deleteBtn" ng-click="remove($event, $index)">delete</div>
+				<div style="padding: 10px;">
+					<input type="text" ng-model="mark.note">
+					<input type="text" ng-model="mark.note2">
+				</div>
+
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

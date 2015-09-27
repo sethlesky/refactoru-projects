@@ -1,0 +1,36 @@
+
+.container {
+	background-color: #a8ede8;
+	width: 960px;
+	margin: 0 auto;
+	min-height: 600px;
+	position: relative;
+}
+
+.map {
+	width: 100%;
+}
+
+.marker {
+	width: 10px;
+	height: 10px;
+	background-color: red;
+	position: absolute;
+}
+
+.note {
+	width: 200px;
+	height: 100px;
+	background-color: white;
+	border-color: gray;
+	border-radius: 5px;
+	border: solid gray 1px;
+	z-index: 10;
+}
+
+.deleteBtn {
+	float: right;
+	right: 5px;
+}
+
+

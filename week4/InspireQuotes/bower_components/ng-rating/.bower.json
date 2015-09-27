@@ -1,0 +1,33 @@
+{
+  "name": "ng-rating",
+  "main": "ng-rating.js",
+  "version": "0.0.9",
+  "homepage": "https://github.com/esleducation/ng-rating",
+  "authors": [
+    "ESL Web Team <web@esl-education.org>"
+  ],
+  "description": "Angular module that provide rating directive",
+  "keywords": [
+    "angular",
+    "rating",
+    "esl"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.9",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.9",
+    "commit": "7696b2d6fff3a10eb358fa69dda1aa54478613d7"
+  },
+  "_source": "git://github.com/esleducation/ng-rating.git",
+  "_target": "~0.0.9",
+  "_originalSource": "ng-rating",
+  "_direct": true
+}

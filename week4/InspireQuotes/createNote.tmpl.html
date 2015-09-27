@@ -1,0 +1,39 @@
+<md-dialog aria-label="Mango (Fruit)">
+  <form ng-submit="saveQuote()">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-icon ng-click="showConfirm($event)" md-font-set="material-icons"> note_add </md-icon>
+      <h2>Add/Edit Quote</h2>
+      <span flex></span>
+      <md-button type="button" class="md-icon-button" ng-click="cancel($event)">
+        <md-icon aria-label="Close dialog">close</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content style="max-width:800px;max-height:810px; ">
+    <div>
+      <p>
+        Share your amazing quote with the world below.
+      </p>
+      <md-content layout-padding class="autoScroll">
+        <md-input-container class="md-icon-float" >
+          <!-- Use floating label instead of placeholder -->
+          <label>Name</label>
+          <md-icon md-font-set="material-icons"> person </md-icon>
+          <input ng-model="quote.name" type="text">
+        </md-input-container>
+        <md-input-container md-no-float>
+          <md-icon md-font-set="material-icons"> format_quote </md-icon>
+          <input ng-model="quote.quote" type="text" placeholder="Your amazing quote">
+        </md-input-container>
+      </md-content>
+    </div>
+  </md-dialog-content>
+  <div class="md-actions" layout="row">
+    <span flex></span>
+    <md-button button="submit" style="margin-right:20px;" >
+      Save
+    </md-button>
+  </div>
+  </form>
+</md-dialog>

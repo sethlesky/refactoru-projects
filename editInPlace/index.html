@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Edit In Place</title>
+</head>
+<body ng-controller="appCtl">
+
+<div class="profile">
+	<img width="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJPLzKEPdE_YOw24V-Ry0NBVu3Z5DvV2r8Q6rrkkTtc4dn9lntZQ">
+	<div class="profile-data">
+		<div>
+			<span ng-click="edit($event,'name')" ng-hide="nameEdit" class="name">{{name}}</span>
+			<input autofocus ng-show="nameEdit" ng-blur="edit($event, 'name')" type="text" ng-model="name">
+			<span class="done" ng-show="nameEdit" ng-click="edit($event, 'name')">done</span>
+		</div>
+		<div>
+			<span ng-click="edit($event, 'address')" ng-hide="addressEdit" class="address">{{address}}</span>
+			<input autofocus ng-show="addressEdit" ng-blur="edit($event, 'address')" type="text" ng-model="address">
+			<span class="done" ng-show="addressEdit" ng-click="edit($event, 'address')">done</span>		
+		</div>	
+		<div>
+			<span ng-click="edit($event, 'phone')" ng-hide="phoneEdit" class="phone">{{phone}}</span>
+			<input autofocus ng-show="phoneEdit" ng-blur="edit($event, 'phone')" type="text" ng-model="phone">
+			<span class="done" ng-show="phoneEdit" ng-click="edit($event, 'phone')">done</span>	
+		</div>
+	</div>	
+</div>
+
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
