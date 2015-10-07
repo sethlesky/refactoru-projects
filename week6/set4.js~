@@ -1,0 +1,11 @@
+var addNumbers = function(str) {
+  for (var i = 0; i < str.length;) {
+    if (!isNaN(str[i])) {
+      console.log(str[i], 'number');
+    } else {
+      i++;
+    }
+  }
+}
+
+addNumbers('he3yhe9y');
