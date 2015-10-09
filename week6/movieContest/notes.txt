@@ -1,0 +1,17 @@
+MVC --- Architecture Pattern
+Model - View - Controller
+
+Models      - Represent our data (in Angular : Services / Factories)
+Views       - What the client sees (in Angular : Rendered HTML)
+Controllers - Glue between the Models / Views (in Angular : Controller functions)
+
+
+$scope.greeting
+{{greeting}}
+
+
+AJAX
+Asynchronous Javascript And XML
+
+AJAJ
+Asynchronous Javascript And JSON
