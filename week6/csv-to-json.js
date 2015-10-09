@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-fs.readFile('./input.csv', 'utf8', function(err, data){
+fs.readFile(process.argv[2], 'utf8', function(err, data){
   var arr = [];
   var lines = data.split('\n');
   var header = lines.shift().split(',');
@@ -15,7 +15,9 @@ fs.readFile('./input.csv', 'utf8', function(err, data){
       arr.push(obj);
     }
   })
+  fs.writeFile(process.argv[3], JSON.stringify(arr), function(err, data){
+    console.log('file written');
+  })
+});
 
-  console.log(JSON.stringify(arr));
 
-})
