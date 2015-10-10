@@ -14,6 +14,13 @@ module.exports = {
 
   getMovies : function(req, res){
     res.send(movieModel.allMovies)
+  },
+
+  voteForMovie : function(req, res) {
+    console.log('index', req.body.index);
+    res.send('hi');
+    movieModel.allMovies[req.body.index].votes++;
+    console.log(movieModel.allMovies[req.body.index]);
   }
 
 }

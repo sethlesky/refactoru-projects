@@ -6,6 +6,7 @@ var Movie = function(movieData){
   this.url = movieData.url;
   this.title = movieData.title;
   this.description = movieData.description;
+  this.votes = 0;
   allMovies.push(this)
 }
 

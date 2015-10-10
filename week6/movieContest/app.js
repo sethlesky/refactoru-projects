@@ -17,8 +17,9 @@ app.get('/', function(req, res){
   res.sendFile('/html/home.html', {root : './public'})
 });
 
-app.get('/getmovies', movieController.getMovies)
+app.get('/getmovies', movieController.getMovies);
 app.post('/addmovie', movieController.addMovie);
+app.post('/voteformovie', movieController.voteForMovie);
 
 // Creating Server and Listening for Connections \\
 var port = 3000

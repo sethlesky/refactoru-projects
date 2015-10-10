@@ -25,7 +25,8 @@
 					<span><strong>Name: </strong></span>{{movie.name}}
 					<span><strong>Title: </strong></span>{{movie.title}}
 					<span><strong>Description: </strong></span>{{movie.description}}
-					<button ng-click="voteUp(movie)">Vote Up</button>
+					<span><strong>Votes: </strong></span>{{movie.votes}}
+					<button ng-click="voteUp($index)">Vote Up</button>
 				</div>
 			</li>
 

@@ -25,17 +25,16 @@ angular.module('ContestApp')
 			} else {
 				alert('you cant do that sucka!');
 			}
-
 		}
 
-		$scope.voteUp = function(movie) {
-			console.log('vote up');
+		$scope.voteUp = function(index) {
+			console.log('vote up', index);
 
-			// $http.post('/voteformovie', movie)
-			// 	.then(function(returnData){
-			// 		console.log( returnData.data )
-			// 		$scope.movies = returnData.data
-			// 	})
+			$http.post('/voteformovie', {index: index})
+				.then(function(returnData){
+					console.log('voting for movie ', index);
+					$scope.movies[index].votes++;
+				})
 		}
 
 	}])
