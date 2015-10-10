@@ -1,7 +1,7 @@
 angular.module('ContestApp', [])
 
 angular.module('ContestApp')
-	.controller('contestCtl', ['$scope', '$http', function($scope, $http){
+	.controller('contestCtl', ['$scope', '$http', '$sce', function($scope, $http, $sce){
 		$scope.greeting = 'Movie Contest'
 		// console.log($http)
 
@@ -10,22 +10,33 @@ angular.module('ContestApp')
 				$scope.movies = returnData.data
 			})
 
-
+		$scope.sce = $sce;
 		$scope.createMovie = function(){
 			// console.log($scope.newCostume)
 
-			// POST data to server
-			$http.post('/addmovie', $scope.newMovie)
-				.then(function(returnData){
-					console.log( returnData.data )
+			if ($scope.movies.length < 8) {
 
-					$scope.movies = returnData.data
-				})
-
+				// POST data to server
+				$http.post('/addmovie', $scope.newMovie)
+					.then(function(returnData){
+						console.log( returnData.data )
+						$scope.movies = returnData.data
+					})
+			} else {
+				alert('you cant do that sucka!');
+			}
 
 		}
 
+		$scope.voteUp = function(movie) {
+			console.log('vote up');
 
+			// $http.post('/voteformovie', movie)
+			// 	.then(function(returnData){
+			// 		console.log( returnData.data )
+			// 		$scope.movies = returnData.data
+			// 	})
+		}
 
 	}])
 

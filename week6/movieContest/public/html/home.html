@@ -19,8 +19,14 @@
 
 	<div>
 		<ul>
-			<li ng-repeat="movie in movies">
-				{{movie.name}}
+			<li ng-repeat="movie in movies" style="display: inline-block; width: 50%; padding-bottom: 20px;">
+				<iframe width="90%" height="300px" ng-src="{{sce.trustAsResourceUrl(movie.url)}}" frameborder="0" allowfullscreen></iframe>
+				<div>
+					<span><strong>Name: </strong></span>{{movie.name}}
+					<span><strong>Title: </strong></span>{{movie.title}}
+					<span><strong>Description: </strong></span>{{movie.description}}
+					<button ng-click="voteUp(movie)">Vote Up</button>
+				</div>
 			</li>
 
 		</ul>
