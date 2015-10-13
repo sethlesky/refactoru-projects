@@ -37,6 +37,16 @@ app.get('/getapps', function(req, res) {
   })
 });
 
+// get list of applicants
+app.post('/deleteapp', function(req, res) {
+  console.log('deleting', req.body);
+  Applicant.remove({_id: req.body._id}, function(err, data) {
+    // res.redirect('/applicants');
+    console.log('deleted');
+    res.send('done');
+  })
+});
+
 // displays a list of applicants
 app.get('/applicants', function(req, res){
 	res.sendFile('html/applicants.html', {root : './public'});
