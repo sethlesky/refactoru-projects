@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  input(class='search' ng-model='searchInput' placeholder='Search countries')
+  button(ng-click='search()') Search
+  button(class='load' ng-click='loadCountries()') Load Countries
+  ul
+    li(ng-repeat='country in countries')
+      {{country.name}}

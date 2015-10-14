@@ -1,0 +1,22 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.search {
+  font-size: 23px;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+.load {
+  display: block;
+}
+
+button {
+  font-size: 23px;
+}

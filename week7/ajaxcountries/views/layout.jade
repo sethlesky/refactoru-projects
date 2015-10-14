@@ -1,0 +1,9 @@
+doctype html
+html(ng-app='AjaxApp')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js')
+    script(src='/javascripts/main.js')
+  body(ng-controller='AjaxCtl')
+    block content
