@@ -14,7 +14,6 @@ angular.module('AjaxApp').controller('AjaxCtl', ['$scope', '$http', function($sc
 
   $scope.search = function() {
     $http.post('/search', {search: $scope.searchInput}).success(function(result) {
-      console.log('searching for', result);
       $scope.countries = result;
     })
   }
