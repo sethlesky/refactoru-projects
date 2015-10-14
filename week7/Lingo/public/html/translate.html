@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="transApp">
+<head>
+  <title>Translate</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+</head>
+<body ng-controller="transCtl">
+  <h1>{{title}}</h1>
+
+  <form ng-submit="translate()">
+    <input ng-model="trans.srcLang" placeholder="Source Language">
+    <input ng-model="trans.targLang" placeholder="Target Language">
+    <input ng-model="trans.text" placeholder="Text to translate">
+    <input type="submit">
+  </form>
+
+
+  <script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>
