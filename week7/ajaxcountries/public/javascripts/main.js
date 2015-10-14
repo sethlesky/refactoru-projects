@@ -13,7 +13,10 @@ angular.module('AjaxApp').controller('AjaxCtl', ['$scope', '$http', function($sc
   }
 
   $scope.search = function() {
-    console.log('searching for', $scope.searchInput);
+    $http.post('/search', {search: $scope.searchInput}).success(function(result) {
+      console.log('searching for', result);
+      $scope.countries = result;
+    })
   }
 
 }]);
