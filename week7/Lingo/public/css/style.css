@@ -1,3 +1,8 @@
 * {
   font-family: Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.translatedText {
+  font-weight: bold;
 }
