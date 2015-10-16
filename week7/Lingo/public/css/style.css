@@ -1,8 +1,12 @@
-* {
-  font-family: Helvetica, sans-serif;
-  box-sizing: border-box;
-}
 
 .translatedText {
   font-weight: bold;
+}
+
+a {
+  cursor: pointer;
+}
+
+nav.navbar {
+  border-radius: 0;
 }
