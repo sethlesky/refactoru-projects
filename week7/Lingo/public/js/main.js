@@ -19,6 +19,11 @@ angular.module('transApp').config(function($stateProvider, $urlRouterProvider) {
 
 angular.module('transApp').controller('transCtl', ['$scope', '$http', function($scope, $http) {
   $scope.title = "Translate App";
+  $scope.quiz = {
+    words : [],
+    started : false,
+    language : ''
+  };
 
   $scope.trans = {
     srcLang: 'en',
@@ -34,6 +39,11 @@ angular.module('transApp').controller('transCtl', ['$scope', '$http', function($
         console.log(result)
         $scope.translatedText = result.data.data.translations[0].translatedText;
       });
+  }
+
+  $scope.setLanguage = function() {
+    console.log('starting quiz');
+    $scope.quiz.started = true;
   }
 
 
