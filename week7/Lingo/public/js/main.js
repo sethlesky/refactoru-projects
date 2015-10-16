@@ -1,14 +1,29 @@
+angular.module('transApp', ['ui.router']);
 
-angular.module('transApp', []);
+angular.module('transApp').config(function($stateProvider, $urlRouterProvider) {
+
+  $urlRouterProvider.otherwise('/translate');
+
+  $stateProvider
+    .state('translate', {
+      url: '/translate',
+      templateUrl: '../html/partial-translate.html'
+    })
+
+    .state('quiz', {
+      url: '/quiz',
+      templateUrl: '../html/partial-quiz.html'
+    });
+
+});
 
 angular.module('transApp').controller('transCtl', ['$scope', '$http', function($scope, $http) {
-  // "https://www.googleapis.com/language/translate/v2?q=goodbye&target=es&format=text&source=en&key=AIzaSyBh0bhARwf6vmHYPwX2tDYYXFjSblAqlWQ";
   $scope.title = "Translate App";
 
   $scope.trans = {
-    srcLang  : 'en',
-    targLang : 'es',
-    text     : 'hello'
+    srcLang: 'en',
+    targLang: 'es',
+    text: 'hello'
   };
 
   $scope.translate = function() {

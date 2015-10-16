@@ -13,22 +13,12 @@
           <a class="navbar-brand" ui-sref="#">Translate App</a>
       </div>
       <ul class="nav navbar-nav">
-          <li><a ui-sref="home">Home</a></li>
-          <li><a ui-sref="about">About</a></li>
+          <li><a ui-sref="translate">Translate</a></li>
+          <li><a ui-sref="quiz">Quiz</a></li>
       </ul>
   </nav>
   <div class="container">
-    <h1>{{title}}</h1>
-
-    <form ng-submit="translate()">
-      <input ng-model="trans.srcLang" placeholder="Source Language">
-      <input ng-model="trans.targLang" placeholder="Target Language">
-      <input ng-model="trans.text" placeholder="Text to translate">
-      <input type="submit">
-    </form>
-
-    <br>
-    Translated to:  <span class="translatedText">{{translatedText}}</span>
+    <div ui-view></div>
   </div>
 
   <script type="text/javascript" src="../js/main.js"></script>
