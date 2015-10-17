@@ -22,7 +22,8 @@ angular.module('transApp').controller('transCtl', ['$scope', '$http', function($
   $scope.quiz = {
     words : [],
     started : false,
-    language : ''
+    language : '',
+    misses : 0
   };
 
   $scope.trans = {

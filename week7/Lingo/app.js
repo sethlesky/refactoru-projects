@@ -31,6 +31,8 @@ app.post('/translate', function(req, res) {
     })
 });
 
+app.post('/makequiz', quizCtl.makequiz);
+
 // Creating Server and Listening for Connections \\
 var port = 3000
 app.listen(port, function(){
