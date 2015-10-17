@@ -47,5 +47,4 @@ angular.module('transApp').controller('transCtl', ['$scope', '$http', function($
   }
 
 
-
 }])
