@@ -3,6 +3,11 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
 
+var quizModel = require('./models/quiz');
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/translation');
+
 // Create Express App Object \\
 var app = express();
 
@@ -31,7 +36,15 @@ app.post('/translate', function(req, res) {
     })
 });
 
-app.post('/makequiz', quizCtl.makequiz);
+app.post('/createquiz', function(req, res) {
+  console.log('create quiz');
+  // console.log(quizModel.Word);
+  // res.send('create quiz');
+  quizModel.Word.find({}, function(err, result) {
+    console.log('found a word');
+    res.send(result);
+  })
+});
 
 // Creating Server and Listening for Connections \\
 var port = 3000

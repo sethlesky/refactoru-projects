@@ -2,9 +2,7 @@ var mongoose = require('mongoose')
   , Schema = mongoose.Schema;
 
 var wordSchema = mongoose.Schema({
-  word   : {type : String},
-  hits   : {type : Number},
-  misses : {type : Number}
+  word   : {type : String}
 });
 
 var quizSchema = mongoose.Schema({

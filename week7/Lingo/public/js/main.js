@@ -47,5 +47,11 @@ angular.module('transApp').controller('transCtl', ['$scope', '$http', function($
     $scope.quiz.started = true;
   }
 
+  $scope.createQuiz = function() {
+    $http.post('/createquiz', {}).then(function(result) {
+      console.log(result);
+    });
+  }
+
 
 }])
